@@ -15,6 +15,7 @@ pipeline {
             steps {
             	sh 'pwd'
                 sh 'ls'
+                sh 'whoami'
                 sh 'npm install'
             }
         }
