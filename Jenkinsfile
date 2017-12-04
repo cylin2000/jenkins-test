@@ -2,7 +2,7 @@ pipeline {
     agent { 
     	docker {
     		image  'node:6.3'
-    		args '-v $HOME/.n63:/root/.n63'
+    		args '-v $HOME/.n63:/root/.n63 -u root:root'
     	} 
     } 
     stages {
