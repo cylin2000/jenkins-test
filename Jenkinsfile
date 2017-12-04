@@ -17,6 +17,7 @@ pipeline {
                 sh 'ls'
                 sh 'whoami'
                 sh 'npm install'
+                sh 'node test.js'
             }
         }
     }
