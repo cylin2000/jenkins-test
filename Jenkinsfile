@@ -1,5 +1,10 @@
 pipeline {
-    agent { docker 'node:6.3' } 
+    agent { 
+    	docker {
+    		image  'node:6.3'
+    		args '-v $HOME/.n63:/root/.n63'
+    	} 
+    } 
     stages {
         stage('Example Build') {
             steps {
