@@ -1,7 +1,7 @@
 pipeline {
     agent { 
     	docker {
-    		image  'nodejs-aws'
+    		image  'node:6.3'
     		args '-v $HOME/.n63:/root/.n63 -u root:root'
     	} 
     } 
@@ -18,6 +18,7 @@ pipeline {
                 sh 'whoami'
                 sh 'npm install'
                 sh 'node test.js'
+                sh 'pip install awscli'
             }
         }
     }
