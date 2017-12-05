@@ -18,7 +18,6 @@ pipeline {
                 sh 'whoami'
                 sh 'npm install'
                 sh 'node test.js'
-                sh 'pip install awscli'
             }
         }
     }
