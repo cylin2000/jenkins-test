@@ -1,1 +1,1 @@
-console.log('hello jenkins with Hook')
+console.log('hello jenkins with Hook Push')
