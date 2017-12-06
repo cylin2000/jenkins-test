@@ -1,9 +1,6 @@
 pipeline {
     agent { 
-    	docker {
-    		dockerfile true
-    		args '-v $HOME/.n63:/root/.n63 -u root:root'
-    	} 
+        dockerfile true
     } 
     stages {
         stage('Example Build') {
