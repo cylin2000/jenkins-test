@@ -17,5 +17,5 @@ RUN   apt-get install -y  curl \
       jq \
       python \
       python-pip \
-# RUN  pip install awscli --upgrade 
+RUN  pip install awscli --upgrade 
 # Expose data volume  #/apps
