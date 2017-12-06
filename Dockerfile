@@ -12,4 +12,4 @@ RUN apt-get update -y && apt-get install -y screen
 # install aws-cli
 RUN pip install awscli
 
-RUN npm install -g serverless
+RUN sudo npm install -g serverless
