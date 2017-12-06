@@ -1,23 +1,13 @@
-FROM node:6.3
-MAINTAINER Calvin Cai
+FROM node:latest
 
+# install yarn
+RUN curl -o- -L https://yarnpkg.com/install.sh | bash
 
-RUN  apt-get update -y && \
-     apt-get upgrade -y && \
-     apt-get dist-upgrade -y && \
-     apt-get -y autoremove && \
-     apt-get clean
+# install python tooling
+RUN apt-get update -y && apt-get install -y python-dev python-pip && pip install --upgrade pip
 
+# install other utils
+RUN apt-get update -y && apt-get install -y screen
 
-RUN   apt-get install -y  curl \
-      zip  \
-      unzip \
-      less \
-      groff \
-      jq \
-      python 
-
-RUN   apt-get update && apt-get install -y python-pip
-
-RUN   pip install awscli --upgrade 
-# Expose data volume  #/apps
+# install aws-cli
+RUN pip install awscli
