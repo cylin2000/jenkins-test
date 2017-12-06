@@ -15,7 +15,9 @@ RUN   apt-get install -y  curl \
       less \
       groff \
       jq \
-      python \
-      python-pip \
-RUN  pip install awscli --upgrade 
+      python 
+
+RUN   apt-get update && apt-get install -y python-pip
+
+RUN   pip install awscli --upgrade 
 # Expose data volume  #/apps
