@@ -1,7 +1,7 @@
 pipeline {
     agent { 
     	docker {
-    		image  'nodejs-aws'
+    		dockerfile true
     		args '-v $HOME/.n63:/root/.n63 -u root:root'
     	} 
     } 
