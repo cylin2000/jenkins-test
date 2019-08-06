@@ -1,10 +1,11 @@
 pipeline {
-    agent { 
-        none
-        /*dockerfile {
+    agent none
+    /*agent { 
+        
+        dockerfile {
             args '-u root:root'
-        }*/
-    } 
+        }
+    } */
     stages {
         stage('Example Build') {
             steps {
