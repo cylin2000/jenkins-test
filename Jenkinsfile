@@ -1,13 +1,13 @@
 pipeline {
     agent { 
-        dockerfile {
+        /*dockerfile {
             args '-u root:root'
-        }
+        }*/
     } 
     stages {
         stage('Example Build') {
             steps {
-                sh 'npm --version'
+                sh 'echo hello'
             }
         }
         stage('Start Deploy') {
@@ -15,8 +15,8 @@ pipeline {
             	sh 'pwd'
                 sh 'ls'
                 sh 'whoami'
-                sh 'npm install'
-                sh 'node test.js'
+                //sh 'npm install'
+                //sh 'node test.js'
             }
         }
     }
