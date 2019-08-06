@@ -4,7 +4,7 @@ pipeline {
             args '-u root:root'
         }
     }
-    triggers { cron( '0 * * * * ? *' ) }
+    triggers { cron( '0 * * * *' ) }
     stages {
         stage('Example Build') {
             steps {
