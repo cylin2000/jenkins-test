@@ -1,10 +1,10 @@
 pipeline {
     agent { 
-        
         dockerfile {
             args '-u root:root'
         }
     }
+    triggers { cron( '0 * * * * ? *' ) }
     stages {
         stage('Example Build') {
             steps {
