@@ -1,5 +1,6 @@
 pipeline {
     agent { 
+        none
         /*dockerfile {
             args '-u root:root'
         }*/
